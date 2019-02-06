@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class enemyBasic : MonoBehaviour
 {
-
     private GameObject player;
 
     public Rigidbody enemyRigidbody;
@@ -59,6 +58,6 @@ public class enemyBasic : MonoBehaviour
 
     private void enemyAim()
     {
-
+        transform.rotation = Quaternion.LookRotation(new Vector3(player.transform.position.x - this.transform.position.x, 0f, player.transform.position.z - this.transform.position.z));
     }
 }
