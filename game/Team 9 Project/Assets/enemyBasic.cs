@@ -10,7 +10,7 @@ public class enemyBasic : MonoBehaviour
     public float enemyMoveSpeed;
 
     private Vector3 enemyMoveDir;
-    private bool chasingPlayer;
+    private bool chasingPlayer = true;
 
     // Start is called before the first frame update
     void Start()
