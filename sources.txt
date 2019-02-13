@@ -1,0 +1,3 @@
+https://gamedevelopment.tutsplus.com/tutorials/battle-circle-ai-let-your-player-feel-like-theyre-fighting-lots-of-enemies--gamedev-13535
+https://forum.yoyogames.com/index.php?threads/making-an-enemy-that-circles-you.19330/
+https://unity3d.com/learn/tutorials/projects/3d-game-kit/deeper-look-enemies
