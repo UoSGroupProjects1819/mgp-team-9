@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerMove : MonoBehaviour
 {
 
-    public Rigidbody playerRigidbody;
+    public Rigidbody2D playerRigidbody;
     public float moveModifier;
 
     // Start is called before the first frame update
@@ -19,11 +19,11 @@ public class playerMove : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            playerRigidbody.velocity = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")) * moveModifier;
+            playerRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveModifier;
         }
         else
         {
-            playerRigidbody.velocity = Vector3.zero;
+            playerRigidbody.velocity = Vector2.zero;
         }
     }
 }
