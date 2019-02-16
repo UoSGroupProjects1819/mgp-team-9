@@ -9,12 +9,14 @@ public class enemyBasic : MonoBehaviour
     public Rigidbody2D enemyRigidbody;
     public float enemyMoveSpeed;
 
-    private Vector2 vectorToPlayer;
+    public Vector2 vectorToPlayer;
     private bool chasingPlayer = true;
 
     public float fleeRadius;
     public float stayRadius;
 
+    public float shootTime;
+    public shootScript enemyShoot;
     private Vector2 aimVector;
 
     // Start is called before the first frame update
@@ -38,13 +40,13 @@ public class enemyBasic : MonoBehaviour
         }
         else
         {
+            // move in a cirle when not moving towards or away from the player
             enemyRigidbody.velocity = Vector2.zero;
+            transform.Translate(new Vector3(0.1f, 0f, 0f));
         }
         // aim AT the player
         EnemyAim();
-        // move in a cirle
-        //enemyCircle();
-        // shoot bullet
+        // shoot bullet (co-routine so we can easily add a shoot period)
     }
 
     private void EnemyMoveAway()
