@@ -198,8 +198,8 @@ MonoBehaviour:
   vectorToPlayer: {x: 0, y: 0}
   fleeRadius: 2
   stayRadius: 3.5
-  shootTime: 0
-  enemyShoot: {fileID: 0}
+  shootStandTime: 0.5
+  enemyShoot: {fileID: 488610417}
 --- !u!212 &488610414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -293,6 +293,7 @@ MonoBehaviour:
   shootDelay: 2
   bullets:
   - {fileID: 1180021898}
+  shooting: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1180021899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -739,6 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738a341c1bfffeb4fb539f0e4e8259a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!1 &1994574448
 GameObject:
   m_ObjectHideFlags: 0

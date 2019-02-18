@@ -8,6 +8,8 @@ public class shootScript : MonoBehaviour
     private float timeSinceLastShot;
     public GameObject[] bullets;
 
+    public bool shooting;
+
     private GameObject tempBullet;
 
     private int bulletPoolLength;
@@ -22,6 +24,7 @@ public class shootScript : MonoBehaviour
     {
         if (timeSinceLastShot >= shootDelay)
         {
+            shooting = true;
             // shoot the bullet
 
             // check object pool for available bullets
@@ -33,7 +36,8 @@ public class shootScript : MonoBehaviour
                     Debug.Log("bullet go shoot");
                     tempBullet.SetActive(true);
                     // give the bullet the correct velocity
-                    tempBullet.transform.rotation = transform.rotation;
+                    tempBullet.transform.localEulerAngles = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z - 90f);
+                    Debug.Log(transform.rotation.eulerAngles.z);
                     tempBullet.transform.position = transform.position;
                     tempBullet.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<enemyBasic>().vectorToPlayer;
                 }

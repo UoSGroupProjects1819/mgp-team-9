@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class bulletScript : MonoBehaviour
 {
+
+    public GameObject enemy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +21,13 @@ public class bulletScript : MonoBehaviour
     public void Shoot()
     {
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

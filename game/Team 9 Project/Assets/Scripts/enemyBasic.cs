@@ -15,7 +15,7 @@ public class enemyBasic : MonoBehaviour
     public float fleeRadius;
     public float stayRadius;
 
-    public float shootTime;
+    public float shootStandTime;
     public shootScript enemyShoot;
     private Vector2 aimVector;
 
@@ -41,12 +41,25 @@ public class enemyBasic : MonoBehaviour
         else
         {
             // move in a cirle when not moving towards or away from the player
-            enemyRigidbody.velocity = Vector2.zero;
-            transform.Translate(new Vector3(0.1f, 0f, 0f));
+            if (enemyShoot.shooting)
+            {
+                enemyRigidbody.velocity = Vector2.zero;
+                StartCoroutine(shootWait());
+            }
+            else
+            {
+                transform.Translate(new Vector3(0.1f, 0f, 0f));
+            }
         }
         // aim AT the player
         EnemyAim();
         // shoot bullet (co-routine so we can easily add a shoot period)
+    }
+
+    private IEnumerator shootWait()
+    {
+        yield return new WaitForSeconds(shootStandTime);
+        enemyShoot.shooting = false;
     }
 
     private void EnemyMoveAway()
