@@ -61,6 +61,7 @@ public class enemyBasic : MonoBehaviour
         if(enemyCurrentHealth <= 0)
         {
             Debug.Log("enemy dead");
+            gameObject.SetActive(false);
         }
     }
 
