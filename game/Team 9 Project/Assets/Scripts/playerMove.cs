@@ -5,6 +5,8 @@ using UnityEngine;
 public class playerMove : MonoBehaviour
 {
 
+    public playerDamage playerDamageScript;
+
     public Rigidbody2D playerRigidbody;
     public float moveModifier;
 

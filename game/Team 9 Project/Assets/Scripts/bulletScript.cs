@@ -5,7 +5,10 @@ using UnityEngine;
 public class bulletScript : MonoBehaviour
 {
 
-    public GameObject enemy;
+    public float bulletDamage;
+
+
+    public float bulletLifeTime;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +20,6 @@ public class bulletScript : MonoBehaviour
     void Update()
     {
         
-    }
-    public void Shoot()
-    {
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

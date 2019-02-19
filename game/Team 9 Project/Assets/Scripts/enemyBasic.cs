@@ -8,10 +8,13 @@ public class enemyBasic : MonoBehaviour
 
     public Rigidbody2D enemyRigidbody;
     public float enemyMoveSpeed;
+    public float enemyStrafeSpeed;
+
+    public float enemyMaxHealth;
+    public float enemyCurrentHealth;
 
     public Vector2 vectorToPlayer;
     private bool chasingPlayer = true;
-
     public float fleeRadius;
     public float stayRadius;
 
@@ -23,6 +26,7 @@ public class enemyBasic : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        enemyCurrentHealth = enemyMaxHealth;
     }
 
     // Update is called once per frame
@@ -48,12 +52,16 @@ public class enemyBasic : MonoBehaviour
             }
             else
             {
-                transform.Translate(new Vector3(0.1f, 0f, 0f));
+                transform.Translate(new Vector3(enemyStrafeSpeed, 0f, 0f));
             }
         }
         // aim AT the player
         EnemyAim();
-        // shoot bullet (co-routine so we can easily add a shoot period)
+
+        if(enemyCurrentHealth <= 0)
+        {
+            Debug.Log("enemy dead");
+        }
     }
 
     private IEnumerator shootWait()
@@ -78,8 +86,16 @@ public class enemyBasic : MonoBehaviour
     private void EnemyAim()
     {
         transform.up = player.transform.position - transform.position;
-        //transform.rotation = Quaternion.LookRotation(new Vector3(player.transform.position.x - this.transform.position.x, 0f, player.transform.position.y - this.transform.position.y));
         Vector2 aimVector = vectorToPlayer;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            // take health away from the player
+            enemyCurrentHealth -= collision.gameObject.GetComponent<bulletScript>().bulletDamage;
+        }
     }
 
     private void OnDrawGizmos()
