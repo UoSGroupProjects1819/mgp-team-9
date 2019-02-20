@@ -101,8 +101,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   enemyRigidbody: {fileID: 1748961916889698066}
-  enemyMoveSpeed: 0
-  enemyStrafeSpeed: 0
+  enemyMoveSpeed: 2
+  enemyStrafeSpeed: 0.05
   enemyMaxHealth: 1
   enemyCurrentHealth: 0
   vectorToPlayer: {x: 0, y: 0}
@@ -110,6 +110,7 @@ MonoBehaviour:
   stayRadius: 5
   shootStandTime: 0.5
   enemyShoot: {fileID: 1748961916889698056}
+  shootLocation: {fileID: 1748961917391172309}
 --- !u!114 &1748961916889698056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +128,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   shooting: 0
+  canShoot: 1
   shootCount: 1
   shootLocation: {fileID: 1748961917391172309}
 --- !u!61 &1748961916889698069

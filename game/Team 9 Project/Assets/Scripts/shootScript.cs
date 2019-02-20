@@ -9,7 +9,7 @@ public class shootScript : MonoBehaviour
     public GameObject[] bullets;
 
     public bool shooting = false;
-    private bool canShoot = true;
+    public bool canShoot = true;
 
     public int shootCount;
     private int bulletsShot;
@@ -28,7 +28,7 @@ public class shootScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (timeSinceLastShot >= shootDelay)
+        if (timeSinceLastShot >= shootDelay && canShoot)
         {
             // shoot the bullet
 

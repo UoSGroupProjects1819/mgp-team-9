@@ -23,6 +23,7 @@ public class enemyBasic : MonoBehaviour
     public shootScript enemyShoot;
     private Vector2 aimVector;
     public GameObject shootLocation;
+    RaycastHit2D[] hit;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +36,24 @@ public class enemyBasic : MonoBehaviour
     void FixedUpdate()
     {
 
-        /*RaycastHit2D[] hit = Physics2D.RaycastAll(shootLocation.transform.position, aimVector, 10f, enemyLayerMask.value);
+        RaycastHit2D[] hit = Physics2D.RaycastAll(shootLocation.transform.position, vectorToPlayer, Mathf.Infinity, enemyLayerMask.value);
+        Debug.DrawRay(shootLocation.transform.position, vectorToPlayer, Color.yellow, 0.5f);
 
-        if(hit != null)
+        Debug.Log(hit.Length);
+        for (int i = 0; i < hit.Length; i++)
         {
-            Debug.Log("ayyyyyy");
-        }*/
+            //Debug.Log(i);
+            //Debug.Log(gameObject.name + " : " +  hit[i].collider.name);
+        }
+
+        if (hit.Length >= 1)
+        {
+            enemyShoot.canShoot = true;
+        }
+        else
+        {
+            enemyShoot.canShoot = false;
+        }
 
         // possibly move this VV when there is an "aggro" (if it exists)
         vectorToPlayer = new Vector2(player.transform.position.x - this.transform.position.x, player.transform.position.y - this.transform.position.y);
