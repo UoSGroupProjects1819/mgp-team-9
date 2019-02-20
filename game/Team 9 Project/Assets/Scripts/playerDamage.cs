@@ -18,6 +18,8 @@ public class playerDamage : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("player dead");
+            // to be removed VV only so the console doesn't annoy me too much
+            currentHealth = maxHealth;
         }
     }
 

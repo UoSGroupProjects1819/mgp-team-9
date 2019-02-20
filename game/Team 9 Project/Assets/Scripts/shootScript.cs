@@ -11,6 +11,9 @@ public class shootScript : MonoBehaviour
     public bool shooting = false;
     private bool canShoot = true;
 
+    public int shootCount;
+    private int bulletsShot;
+
     private GameObject tempBullet;
 
     public GameObject shootLocation;
@@ -23,7 +26,7 @@ public class shootScript : MonoBehaviour
         bulletPoolLength = bullets.Length;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (timeSinceLastShot >= shootDelay)
         {
@@ -32,8 +35,9 @@ public class shootScript : MonoBehaviour
             // check object pool for available bullets
             for (int i = 0; i < bulletPoolLength; i++)
             {
-                if (bullets[i].gameObject.activeSelf == false)
+                if (bullets[i].gameObject.activeSelf == false && bulletsShot < shootCount)
                 {
+                    bulletsShot += 1;
                     // now we have found a bullet so shoot, let the other script know we are shooting
                     shooting = true;
                     // grab the bullet instance so we can apply all the correct transform and velocity to ITself
@@ -46,10 +50,9 @@ public class shootScript : MonoBehaviour
                     tempBullet.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<enemyBasic>().vectorToPlayer;
                 }
             }
+            bulletsShot = 0;
             timeSinceLastShot = 0f;
         }
-
-
         timeSinceLastShot += Time.deltaTime;
     }
 }

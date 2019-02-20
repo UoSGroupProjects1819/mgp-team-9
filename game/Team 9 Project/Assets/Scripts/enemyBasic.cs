@@ -6,6 +6,7 @@ public class enemyBasic : MonoBehaviour
 {
     private GameObject player;
 
+    public LayerMask enemyLayerMask;
     public Rigidbody2D enemyRigidbody;
     public float enemyMoveSpeed;
     public float enemyStrafeSpeed;
@@ -21,6 +22,7 @@ public class enemyBasic : MonoBehaviour
     public float shootStandTime;
     public shootScript enemyShoot;
     private Vector2 aimVector;
+    public GameObject shootLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +32,16 @@ public class enemyBasic : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+
+        /*RaycastHit2D[] hit = Physics2D.RaycastAll(shootLocation.transform.position, aimVector, 10f, enemyLayerMask.value);
+
+        if(hit != null)
+        {
+            Debug.Log("ayyyyyy");
+        }*/
+
         // possibly move this VV when there is an "aggro" (if it exists)
         vectorToPlayer = new Vector2(player.transform.position.x - this.transform.position.x, player.transform.position.y - this.transform.position.y);
         // move the enemy towards the player
@@ -107,5 +117,8 @@ public class enemyBasic : MonoBehaviour
         // draw stayRadius in scene
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, stayRadius);
+        // draw the raycast
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawRay(shootLocation.transform.position, aimVector);
     }
 }
