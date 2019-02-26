@@ -15,7 +15,6 @@ public class enemyBasic : MonoBehaviour
     public float enemyCurrentHealth;
 
     public Vector2 vectorToPlayer;
-    private bool chasingPlayer = true;
     public float fleeRadius;
     public float stayRadius;
 
@@ -58,7 +57,7 @@ public class enemyBasic : MonoBehaviour
         // possibly move this VV when there is an "aggro" (if it exists)
         vectorToPlayer = new Vector2(player.transform.position.x - this.transform.position.x, player.transform.position.y - this.transform.position.y);
         // move the enemy towards the player
-        if (chasingPlayer && vectorToPlayer.magnitude > stayRadius)
+        if (vectorToPlayer.magnitude > stayRadius)
         {
             EnemyMove();
         }

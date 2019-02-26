@@ -1,0 +1,10 @@
+Enemy AI:
+https://gamedevelopment.tutsplus.com/tutorials/battle-circle-ai-let-your-player-feel-like-theyre-fighting-lots-of-enemies--gamedev-13535
+https://forum.yoyogames.com/index.php?threads/making-an-enemy-that-circles-you.19330/
+https://unity3d.com/learn/tutorials/projects/3d-game-kit/deeper-look-enemies
+https://www.gamasutra.com/blogs/DanielSteckly/20160201/264784/Good_AI_is_Predictable.php
+https://answers.unity.com/questions/1317739/check-if-player-is-in-enemys-fov.html
+
+Enemy Bullet Handling:
+https://answers.unity.com/questions/208887/bullet-hell-how-to-make-a-lot-of-bullets.html
+https://www.gamedev.net/forums/topic/663724-bullet-hell-projectiles-as-separate-objects-or-as-one-whole-particle-system/

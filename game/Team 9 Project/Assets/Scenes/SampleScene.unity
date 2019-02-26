@@ -1283,6 +1283,16 @@ PrefabInstance:
       propertyPath: shootCount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1748961916889698056, guid: a8451034d6ab3cd4bbea4536703e1d71,
+        type: 3}
+      propertyPath: shootChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748961916889698056, guid: a8451034d6ab3cd4bbea4536703e1d71,
+        type: 3}
+      propertyPath: shootChancePerFrame
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8451034d6ab3cd4bbea4536703e1d71, type: 3}
 --- !u!1 &1408358530
@@ -1764,16 +1774,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1748961916889698068, guid: a8451034d6ab3cd4bbea4536703e1d71,
-        type: 3}
-      propertyPath: enemyLayerMask.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 1748961916889698068, guid: a8451034d6ab3cd4bbea4536703e1d71,
-        type: 3}
-      propertyPath: shootLocation
-      value: 
-      objectReference: {fileID: 993224620}
     - target: {fileID: 1748961916889698056, guid: a8451034d6ab3cd4bbea4536703e1d71,
         type: 3}
       propertyPath: bullets.Array.data[0]
@@ -1784,5 +1784,15 @@ PrefabInstance:
       propertyPath: bullets.Array.data[1]
       value: 
       objectReference: {fileID: 1823758593}
+    - target: {fileID: 1748961916889698068, guid: a8451034d6ab3cd4bbea4536703e1d71,
+        type: 3}
+      propertyPath: enemyLayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748961916889698068, guid: a8451034d6ab3cd4bbea4536703e1d71,
+        type: 3}
+      propertyPath: shootLocation
+      value: 
+      objectReference: {fileID: 993224620}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8451034d6ab3cd4bbea4536703e1d71, type: 3}

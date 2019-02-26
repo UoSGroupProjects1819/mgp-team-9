@@ -106,7 +106,7 @@ MonoBehaviour:
   enemyMaxHealth: 1
   enemyCurrentHealth: 0
   vectorToPlayer: {x: 0, y: 0}
-  fleeRadius: 3.5
+  fleeRadius: 1.67
   stayRadius: 5
   shootStandTime: 0.5
   enemyShoot: {fileID: 1748961916889698056}
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootDelay: 2
+  shootChancePerFrame: 1
   bullets:
   - {fileID: 0}
   - {fileID: 0}
