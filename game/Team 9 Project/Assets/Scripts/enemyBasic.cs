@@ -38,7 +38,7 @@ public class enemyBasic : MonoBehaviour
         RaycastHit2D[] hit = Physics2D.RaycastAll(shootLocation.transform.position, vectorToPlayer, Mathf.Infinity, enemyLayerMask.value);
         Debug.DrawRay(shootLocation.transform.position, vectorToPlayer, Color.yellow, 0.5f);
 
-        Debug.Log(hit.Length);
+        //Debug.Log(hit.Length);
         for (int i = 0; i < hit.Length; i++)
         {
             //Debug.Log(i);

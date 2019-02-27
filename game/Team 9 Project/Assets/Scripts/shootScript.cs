@@ -7,6 +7,7 @@ public class shootScript : MonoBehaviour
     public float shootDelay;
     [Range(0, 1)]
     public float shootChancePerFrame;
+    public float shootSpeed;
     private float timeSinceLastShot;
     public GameObject[] bullets;
 
@@ -60,12 +61,12 @@ public class shootScript : MonoBehaviour
                 shooting = true;
                 // grab the bullet instance so we can apply all the correct transform and velocity to ITself
                 tempBullet = bullets[i].gameObject;
-                Debug.Log("bullet go shoot");
+                //Debug.Log("bullet go shoot");
                 tempBullet.SetActive(true);
                 // give the bullet the correct velocity
                 tempBullet.transform.localEulerAngles = new Vector3(shootLocation.transform.rotation.eulerAngles.x, shootLocation.transform.rotation.eulerAngles.y, shootLocation.transform.rotation.eulerAngles.z - 90f);
                 tempBullet.transform.position = shootLocation.transform.position;
-                tempBullet.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<enemyBasic>().vectorToPlayer;
+                tempBullet.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<enemyBasic>().vectorToPlayer.normalized * shootSpeed;
             }
         }
         bulletsShot = 0;

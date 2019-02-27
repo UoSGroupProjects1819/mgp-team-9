@@ -39,6 +39,20 @@ public class bulletScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Shield"))
+        {
+            Debug.Log("hitting shield");
+            flipDirection();
+        }
+    }
+
+    private void flipDirection()
+    {
+        gameObject.GetComponent<Rigidbody2D>().velocity *= -1;
+    }
+
     private void bulletDie()
     {
         this.gameObject.SetActive(false);

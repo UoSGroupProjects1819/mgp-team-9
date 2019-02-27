@@ -8,3 +8,7 @@ https://answers.unity.com/questions/1317739/check-if-player-is-in-enemys-fov.htm
 Enemy Bullet Handling:
 https://answers.unity.com/questions/208887/bullet-hell-how-to-make-a-lot-of-bullets.html
 https://www.gamedev.net/forums/topic/663724-bullet-hell-projectiles-as-separate-objects-or-as-one-whole-particle-system/
+
+Looking:
+https://www.youtube.com/watch?v=Geb_PnF1wOk
+https://www.youtube.com/watch?v=_XdqA3xbP2A

@@ -10,6 +10,7 @@ public class playerMove : MonoBehaviour
     public Rigidbody2D playerRigidbody;
     public float moveModifier;
 
+
     // Start is called before the first frame update
     void Start()
     {
