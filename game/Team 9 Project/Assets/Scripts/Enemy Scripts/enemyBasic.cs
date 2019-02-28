@@ -84,6 +84,7 @@ public class enemyBasic : MonoBehaviour
         {
             Debug.Log("enemy dead");
             gameObject.SetActive(false);
+            GameObject.Find("Spawner").GetComponent<enemySpawnControl>().enemyCount -= 1;
         }
     }
 

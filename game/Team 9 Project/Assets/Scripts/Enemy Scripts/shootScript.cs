@@ -9,7 +9,15 @@ public class shootScript : MonoBehaviour
     public float shootChancePerFrame;
     public float shootSpeed;
     private float timeSinceLastShot;
-    public GameObject[] bullets;
+    private List<GameObject> bullets = new List<GameObject>();
+
+    public enum BulletType
+    {
+        regular,
+        rebound
+    };
+
+    public BulletType bulletType;
 
     [HideInInspector]
     public bool shooting = false;
@@ -28,7 +36,9 @@ public class shootScript : MonoBehaviour
     void Start()
     {
         timeSinceLastShot = 0f;
-        bulletPoolLength = bullets.Length;
+        bulletType = BulletType.regular;
+        getBulletPool();
+        bulletPoolLength = bullets.Count;
     }
 
     void FixedUpdate()
@@ -72,5 +82,13 @@ public class shootScript : MonoBehaviour
         bulletsShot = 0;
         timeSinceLastShot = 0f;
         timeSinceLastShot += Time.deltaTime;
+    }
+
+    private void getBulletPool()
+    {
+        if (bulletType == BulletType.regular)
+        {
+            bullets = GameObject.Find("Regular Bullet Pool").GetComponent<bulletPool>().buildBulletPool();
+        }
     }
 }
