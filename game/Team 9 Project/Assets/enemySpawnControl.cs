@@ -6,11 +6,13 @@ public class enemySpawnControl : MonoBehaviour
 {
 
     public float numberOfWaves;
+    private float waveNumber = 0;
+    public bool enemiesMustBeDead = true;
     public float enemiesPerWave;
 
     public enum spawnType
     {
-        time,
+        waves,
         enemyCount,
     };
 
@@ -28,10 +30,11 @@ public class enemySpawnControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SpawnType == spawnType.time)
+        if (SpawnType == spawnType.waves)
         {
+            spawnWave();
             StartCoroutine(countdownToNextWave());
-        }        
+        }
     }
 
     // Update is called once per frame
@@ -39,18 +42,29 @@ public class enemySpawnControl : MonoBehaviour
     {
         if (SpawnType == spawnType.enemyCount)
         {
-            if (enemyCount == 0)
+            if (enemyCount < maxEnemyCount)
             {
                 if (canSpawnEnemy)
                 {
-                    spawnWave();
+                    spawnEnemy();
                     StartCoroutine(countdownToNextWave());
                 }
             }
         }
-        else if (canSpawnEnemy && enemyCount < maxEnemyCount)
+        else if (SpawnType == spawnType.waves)
         {
-            StartCoroutine(countdownToNextWave());
+            if (enemiesMustBeDead)
+            {
+                if (enemyCount != 0)
+                {
+                    canSpawnEnemy = false;
+                }
+            }
+            if (canSpawnEnemy && waveNumber < numberOfWaves)
+            {
+                spawnWave();
+                StartCoroutine(countdownToNextWave());
+            }
         }
     }
 
@@ -62,6 +76,7 @@ public class enemySpawnControl : MonoBehaviour
 
     private void spawnWave()
     {
+        waveNumber += 1;
         for (int i = 0; i < enemiesPerWave; i++)
         {
             spawnEnemy();
