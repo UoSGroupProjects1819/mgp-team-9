@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class doorScript : MonoBehaviour
 {
-    public bool open;
-    public enemySpawnControl EnemySpawnControl;
+    private bool open;
+    private enemySpawnControl EnemySpawnControl;
     public BoxCollider2D boxCollider;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,19 @@ public class doorScript : MonoBehaviour
         {
             StartCoroutine(checkIfWavesEnded());
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("fnjfenjwnal");
+        if (collision.CompareTag("Bullet"))
+        {
+            if (EnemySpawnControl.enemyCount <= 1)
+            {
+                open = true;
+            }
+        }
+        
     }
 
     private IEnumerator checkIfWavesEnded()
