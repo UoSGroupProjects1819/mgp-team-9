@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(shieldScript))]
 public class doorScript : MonoBehaviour
 {
     private bool open;
     private enemySpawnControl EnemySpawnControl;
-    public BoxCollider2D boxCollider;
+    private BoxCollider2D boxCollider;
+    private SpriteRenderer spriteRenderer;
+
+    public Sprite doorOpenSprite;
+
     // Start is called before the first frame update
     void Start()
     {
         EnemySpawnControl = GameObject.Find("Spawner").GetComponent<enemySpawnControl>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -21,24 +29,12 @@ public class doorScript : MonoBehaviour
         {
             boxCollider.enabled = false;
             // change the sprite
+            //spriteRenderer.sprite = doorOpenSprite;
         }
         else
         {
             StartCoroutine(checkIfWavesEnded());
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("fnjfenjwnal");
-        if (collision.CompareTag("Bullet"))
-        {
-            if (EnemySpawnControl.enemyCount <= 1)
-            {
-                open = true;
-            }
-        }
-        
     }
 
     private IEnumerator checkIfWavesEnded()
@@ -48,5 +44,11 @@ public class doorScript : MonoBehaviour
         {
             open = true;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(this.transform.position, new Vector3(1.5f, 1.5f, 1.5f));
     }
 }
