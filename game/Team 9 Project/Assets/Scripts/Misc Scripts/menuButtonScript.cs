@@ -14,4 +14,13 @@ public class menuButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void QuitGame()
+    {
+        // stops the game if using editor
+        UnityEditor.EditorApplication.isPlaying = false;
+
+        // quits the game when in a standalone application
+        Application.Quit();
+    }
 }
