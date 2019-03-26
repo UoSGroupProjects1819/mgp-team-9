@@ -6,19 +6,27 @@ public class enemyBasic : MonoBehaviour
 {
     private GameObject player;
 
+    [Header("Collision Detection")]
     public LayerMask enemyLayerMask;
+    public LayerMask playerLayerMask;
     public Rigidbody2D enemyRigidbody;
+    [Header("Enemy Movement")]
     public float enemyMoveSpeed;
+    [Range(0, 0.1f)]
     public float enemyStrafeSpeed;
+    public float shootStandTime;
 
+    [Header("Enemy Health")]
     public float enemyMaxHealth;
     public float enemyCurrentHealth;
 
+    [HideInInspector]
     public Vector2 vectorToPlayer;
+    [Header("Enemy Engagement")]
     public float fleeRadius;
     public float stayRadius;
 
-    public float shootStandTime;
+    [Header("Enemy Misc Items")]
     public shootScript enemyShoot;
     private Vector2 aimVector;
     public GameObject shootLocation;
@@ -36,6 +44,7 @@ public class enemyBasic : MonoBehaviour
     {
 
         RaycastHit2D[] hit = Physics2D.RaycastAll(shootLocation.transform.position, vectorToPlayer, Mathf.Infinity, enemyLayerMask.value);
+        RaycastHit2D[] hit2 = Physics2D.RaycastAll(shootLocation.transform.position, vectorToPlayer, Mathf.Infinity, playerLayerMask.value);
         Debug.DrawRay(shootLocation.transform.position, vectorToPlayer, Color.yellow, 0.5f);
 
         if (hit.Length >= 1)

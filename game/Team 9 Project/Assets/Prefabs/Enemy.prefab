@@ -100,15 +100,18 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
   enemyRigidbody: {fileID: 1748961916889698066}
   enemyMoveSpeed: 2
-  enemyStrafeSpeed: 0.05
+  enemyStrafeSpeed: 0.1
+  shootStandTime: 0.5
   enemyMaxHealth: 1
   enemyCurrentHealth: 0
   vectorToPlayer: {x: 0, y: 0}
   fleeRadius: 4.5
-  stayRadius: 5
-  shootStandTime: 0.5
+  stayRadius: 6.96
   enemyShoot: {fileID: 1748961916889698056}
   shootLocation: {fileID: 1748961917391172309}
 --- !u!114 &1748961916889698056
@@ -124,8 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootDelay: 2
-  shootChancePerFrame: 1
-  shootSpeed: 6
+  shootChancePerFrame: 0.263
+  shootSpeed: 8
   bulletType: 0
   shooting: 0
   canShoot: 1
