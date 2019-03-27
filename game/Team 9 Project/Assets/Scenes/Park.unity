@@ -436,6 +436,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4659305081849462607, guid: 48e4e5c224da45e43b392738e2611569,
+        type: 3}
+      propertyPath: enemiesPerWave
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659305081849462607, guid: 48e4e5c224da45e43b392738e2611569,
+        type: 3}
+      propertyPath: spawnTime
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48e4e5c224da45e43b392738e2611569, type: 3}
 --- !u!1001 &1468906067

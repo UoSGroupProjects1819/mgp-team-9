@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 031e509cb8fe8f645955468a83d34cf8
   - enabled: 1
+    path: Assets/Scenes/Agency.unity
+    guid: 80b15e488c286214f8933d8ba2987853
+  - enabled: 1
     path: Assets/Scenes/Park.unity
     guid: f8f1ac3dd8a80f94bba655d7c0e5d4cd
   m_configObjects: {}

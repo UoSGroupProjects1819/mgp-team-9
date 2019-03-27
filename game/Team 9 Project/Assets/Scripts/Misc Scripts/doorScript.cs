@@ -40,7 +40,7 @@ public class doorScript : MonoBehaviour
     private IEnumerator checkIfWavesEnded()
     {
         yield return new WaitForSeconds(0.5f);
-        if(EnemySpawnControl.enemyCount == 0)
+        if(EnemySpawnControl.enemyCount <= 1)
         {
             open = true;
         }
