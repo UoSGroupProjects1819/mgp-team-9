@@ -14,10 +14,12 @@ public class doorScript : MonoBehaviour
 
     public Sprite doorOpenSprite;
 
+    public GameObject Room;
+
     // Start is called before the first frame update
     void Start()
     {
-        EnemySpawnControl = GameObject.Find("Spawner").GetComponent<enemySpawnControl>();
+        EnemySpawnControl = Room.GetComponentInChildren<enemySpawnControl>();
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -39,10 +41,11 @@ public class doorScript : MonoBehaviour
 
     private IEnumerator checkIfWavesEnded()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(3f);
         if(EnemySpawnControl.enemyCount <= 1)
         {
             open = true;
+            Debug.Log("Door Open : " + EnemySpawnControl.enemyCount);
         }
     }
 
