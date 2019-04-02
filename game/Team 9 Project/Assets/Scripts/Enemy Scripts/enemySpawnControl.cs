@@ -70,7 +70,7 @@ public class enemySpawnControl : MonoBehaviour
 
     private void spawnEnemy()
     {
-        Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity, transform.parent);
+        Instantiate(enemy, spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity);
         enemyCount += 1;
     }
 

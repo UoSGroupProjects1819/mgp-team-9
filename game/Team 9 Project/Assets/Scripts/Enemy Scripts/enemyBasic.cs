@@ -86,7 +86,7 @@ public class enemyBasic : MonoBehaviour
         {
             Debug.Log("enemy dead");
             gameObject.SetActive(false);
-            transform.parent.GetComponentInChildren<enemySpawnControl>().enemyCount -= 1;
+            GameObject.Find("Spawner").GetComponent<enemySpawnControl>().enemyCount -= 1;
         }
     }
 
