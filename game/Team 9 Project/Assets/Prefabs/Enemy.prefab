@@ -104,10 +104,13 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 512
+  doorLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   enemyRigidbody: {fileID: 1748961916889698066}
   enemyMoveSpeed: 2
   enemyStrafeSpeed: 0.1
-  shootStandTime: 0.5
+  shootStandTime: 0.75
   enemyMaxHealth: 1
   enemyCurrentHealth: 0
   vectorToPlayer: {x: 0, y: 0}

@@ -2872,35 +2872,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: numberOfWaves
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: enemiesPerWave
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683115054829972349, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683115054829972349, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 2683115056011151884, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683115054057681069, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683115054057681069, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.02
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8795392605869835739, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
@@ -2922,25 +2897,40 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 2683115054829972349, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: m_Offset.x
-      value: -0.2513075
+      propertyPath: m_LocalPosition.y
+      value: 2.47
       objectReference: {fileID: 0}
-    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 2683115054829972349, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: m_Size.x
-      value: 4.1022625
+      propertyPath: m_LocalPosition.x
+      value: -8.05
       objectReference: {fileID: 0}
-    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 2683115054057681069, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: m_Offset.y
-      value: 4.684495
+      propertyPath: m_LocalPosition.y
+      value: -3.81
       objectReference: {fileID: 0}
-    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 2683115054057681069, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: m_Size.y
-      value: 3.3332691
+      propertyPath: m_LocalPosition.x
+      value: -8.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: numberOfWaves
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: enemiesPerWave
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: enemiesMustBeDead
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2683115056011151886, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
@@ -2961,6 +2951,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.3140411
+      objectReference: {fileID: 0}
+    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.2513075
+      objectReference: {fileID: 0}
+    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.1022625
+      objectReference: {fileID: 0}
+    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 4.684495
+      objectReference: {fileID: 0}
+    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.3332691
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e51b3df5eda7b48bb8f4547511b9be, type: 3}
@@ -3313,25 +3323,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 8795392605869835739, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: spawnPoints.Array.size
-      value: 3
+      propertyPath: m_LocalPosition.x
+      value: -4.76
       objectReference: {fileID: 0}
-    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 8795392605869835739, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: spawnPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 1843052672}
-    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: numberOfWaves
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: enemiesPerWave
-      value: 3
+      propertyPath: m_LocalPosition.y
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2683115054829972349, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
@@ -3353,35 +3353,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -6.17
       objectReference: {fileID: 0}
-    - target: {fileID: 8795392605869835739, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.76
+      propertyPath: spawnPoints.Array.size
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 8795392605869835739, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.7
+      propertyPath: spawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1843052672}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: numberOfWaves
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
-      propertyPath: m_Offset.x
-      value: 10.029242
-      objectReference: {fileID: 0}
-    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.4885864
-      objectReference: {fileID: 0}
-    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.91124725
-      objectReference: {fileID: 0}
-    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 3.9058685
+      propertyPath: enemiesPerWave
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2683115056011151886, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
@@ -3402,6 +3392,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 4.4665585
+      objectReference: {fileID: 0}
+    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 10.029242
+      objectReference: {fileID: 0}
+    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.4885864
+      objectReference: {fileID: 0}
+    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.91124725
+      objectReference: {fileID: 0}
+    - target: {fileID: 869165384635229698, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.9058685
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e51b3df5eda7b48bb8f4547511b9be, type: 3}
