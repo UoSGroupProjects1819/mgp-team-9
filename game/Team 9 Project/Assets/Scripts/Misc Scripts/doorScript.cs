@@ -42,6 +42,7 @@ public class doorScript : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if(EnemySpawnControl.enemyCount == 0)
         {
+            Debug.Log("Stage Finished!");
             open = true;
         }
     }

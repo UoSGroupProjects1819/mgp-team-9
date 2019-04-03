@@ -101,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6922724656015027019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f3091e862e35140a32ef114e55f6ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f0612873bf9b8146a8584b808e7d8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doorOpenSprite: {fileID: 0}

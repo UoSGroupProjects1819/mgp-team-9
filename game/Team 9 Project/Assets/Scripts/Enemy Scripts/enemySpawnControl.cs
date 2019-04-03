@@ -26,45 +26,55 @@ public class enemySpawnControl : MonoBehaviour
     public GameObject[] spawnPoints;
 
     private bool canSpawnEnemy = true;
+    private BoxCollider2D roomArea;
+    private bool roomEntered = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (SpawnType == spawnType.waves)
-        {
-            spawnWave();
-            StartCoroutine(countdownToNextWave());
-        }
+        roomArea = gameObject.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (SpawnType == spawnType.enemyCount)
+        if (roomEntered)
         {
-            if (enemyCount < maxEnemyCount)
+            if (SpawnType == spawnType.enemyCount)
             {
-                if (canSpawnEnemy)
+                if (enemyCount < maxEnemyCount)
                 {
-                    spawnEnemy();
+                    if (canSpawnEnemy)
+                    {
+                        spawnEnemy();
+                        StartCoroutine(countdownToNextWave());
+                    }
+                }
+            }
+            else if (SpawnType == spawnType.waves)
+            {
+                if (enemiesMustBeDead)
+                {
+                    if (enemyCount != 0)
+                    {
+                        canSpawnEnemy = false;
+                    }
+                }
+                if (canSpawnEnemy && waveNumber < numberOfWaves)
+                {
+                    spawnWave();
                     StartCoroutine(countdownToNextWave());
                 }
             }
         }
-        else if (SpawnType == spawnType.waves)
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            if (enemiesMustBeDead)
-            {
-                if (enemyCount != 0)
-                {
-                    canSpawnEnemy = false;
-                }
-            }
-            if (canSpawnEnemy && waveNumber < numberOfWaves)
-            {
-                spawnWave();
-                StartCoroutine(countdownToNextWave());
-            }
+            Debug.Log("Player entered room");
+            roomEntered = true;
         }
     }
 
