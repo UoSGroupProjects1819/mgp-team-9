@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 6922724656015027021}
   - component: {fileID: 2128257209}
   - component: {fileID: 2128257208}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Door
   m_TagString: Shield
   m_Icon: {fileID: 0}

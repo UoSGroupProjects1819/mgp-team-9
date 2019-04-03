@@ -27,7 +27,8 @@ public class enemySpawnControl : MonoBehaviour
 
     private bool canSpawnEnemy = true;
     private BoxCollider2D roomArea;
-    private bool roomEntered = false;
+    [HideInInspector]
+    public bool roomEntered = false;
 
     // Start is called before the first frame update
     void Start()

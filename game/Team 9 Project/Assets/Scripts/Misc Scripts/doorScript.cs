@@ -12,12 +12,14 @@ public class doorScript : MonoBehaviour
     private BoxCollider2D boxCollider;
     private SpriteRenderer spriteRenderer;
 
+    private bool roomEntered = false;
+
     public Sprite doorOpenSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-        EnemySpawnControl = GameObject.Find("Spawner").GetComponent<enemySpawnControl>();
+        EnemySpawnControl = transform.parent.GetComponentInChildren<enemySpawnControl>();
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -39,10 +41,11 @@ public class doorScript : MonoBehaviour
 
     private IEnumerator checkIfWavesEnded()
     {
+        roomEntered = EnemySpawnControl.roomEntered;
         yield return new WaitForSeconds(0.5f);
-        if(EnemySpawnControl.enemyCount == 0)
+        if(EnemySpawnControl.enemyCount == 0 && roomEntered)
         {
-            Debug.Log("Stage Finished!");
+            Debug.Log("Stage Finished!" + transform.parent.name);
             open = true;
         }
     }
