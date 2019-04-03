@@ -56,7 +56,8 @@ public class shootScript : MonoBehaviour
         {
             // shoot the bullet
             shootBullet();
-        }       
+        }
+        timeSinceLastShot += Time.deltaTime;
     }
 
     private void shootBullet()
@@ -81,7 +82,6 @@ public class shootScript : MonoBehaviour
         }
         bulletsShot = 0;
         timeSinceLastShot = 0f;
-        timeSinceLastShot += Time.deltaTime;
     }
 
     private void getBulletPool()
