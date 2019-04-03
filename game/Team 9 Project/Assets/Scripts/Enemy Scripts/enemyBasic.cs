@@ -32,6 +32,9 @@ public class enemyBasic : MonoBehaviour
     public GameObject shootLocation;
     RaycastHit2D[] hit;
 
+    [Header("Enemy Animation")]
+    public Animator enemyAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,13 +88,13 @@ public class enemyBasic : MonoBehaviour
         if(enemyCurrentHealth <= 0)
         {
             Debug.Log("enemy dead");
-            gameObject.SetActive(false);
-            transform.parent.GetComponentInChildren<enemySpawnControl>().enemyCount -= 1;
+            enemyRigidbody.velocity = Vector2.zero;
         }
     }
 
     private IEnumerator shootWait()
     {
+        enemyAnimator.SetTrigger("Shoot");
         yield return new WaitForSeconds(shootStandTime);
         enemyShoot.shooting = false;
     }
@@ -121,7 +124,16 @@ public class enemyBasic : MonoBehaviour
         {
             // take health away from the player
             enemyCurrentHealth -= collision.gameObject.GetComponent<bulletScript>().bulletDamage;
+            StartCoroutine(playHitAnimation());
         }
+    }
+
+    public IEnumerator playHitAnimation()
+    {
+        enemyAnimator.SetTrigger("Hit");
+        yield return new WaitForSeconds(1f);
+        transform.parent.GetComponentInChildren<enemySpawnControl>().enemyCount -= 1;
+        gameObject.SetActive(false);
     }
 
     private void OnDrawGizmos()

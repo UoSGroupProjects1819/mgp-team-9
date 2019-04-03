@@ -115,6 +115,7 @@ MonoBehaviour:
   stayRadius: 6.96
   enemyShoot: {fileID: 1748961916889698056}
   shootLocation: {fileID: 1748961917391172309}
+  enemyAnimator: {fileID: 1149375820316091122}
 --- !u!114 &1748961916889698056
 MonoBehaviour:
   m_ObjectHideFlags: 0
