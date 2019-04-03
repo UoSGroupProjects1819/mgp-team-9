@@ -2266,6 +2266,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.91
       objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: enemiesMustBeDead
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: enemiesPerWave
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8795392605869835738, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: m_Offset.x
@@ -2928,12 +2938,12 @@ PrefabInstance:
     - target: {fileID: 7612486017202765723, guid: d1bcfa7291f07fe4caa1da7d7b4daa08,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.39
+      value: -14.98
       objectReference: {fileID: 0}
     - target: {fileID: 7612486017202765723, guid: d1bcfa7291f07fe4caa1da7d7b4daa08,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.64
+      value: 2.72
       objectReference: {fileID: 0}
     - target: {fileID: 7612486017202765723, guid: d1bcfa7291f07fe4caa1da7d7b4daa08,
         type: 3}
@@ -15966,6 +15976,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: numberOfWaves
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: enemiesPerWave
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: enemiesMustBeDead
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e51b3df5eda7b48bb8f4547511b9be, type: 3}

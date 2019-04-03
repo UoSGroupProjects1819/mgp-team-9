@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Bits: 0
   enemyRigidbody: {fileID: 1748961916889698066}
   enemyMoveSpeed: 2
-  enemyStrafeSpeed: 0.1
+  enemyStrafeSpeed: 0.05
   shootStandTime: 0.75
   enemyMaxHealth: 1
   enemyCurrentHealth: 0

@@ -75,7 +75,7 @@ public class shootScript : MonoBehaviour
                 //Debug.Log("bullet go shoot");
                 tempBullet.SetActive(true);
                 // give the bullet the correct velocity
-                tempBullet.transform.localEulerAngles = new Vector3(shootLocation.transform.rotation.eulerAngles.x, shootLocation.transform.rotation.eulerAngles.y, shootLocation.transform.rotation.eulerAngles.z - 90f);
+                tempBullet.transform.localEulerAngles = new Vector3(shootLocation.transform.rotation.eulerAngles.x, shootLocation.transform.rotation.eulerAngles.y, shootLocation.transform.rotation.eulerAngles.z);
                 tempBullet.transform.position = shootLocation.transform.position;
                 tempBullet.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<enemyBasic>().vectorToPlayer.normalized * shootSpeed;
             }

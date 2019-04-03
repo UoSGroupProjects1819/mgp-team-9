@@ -29,7 +29,8 @@ public class doorScript : MonoBehaviour
     {
         if (open)
         {
-            boxCollider.enabled = false;
+            this.gameObject.SetActive(false);
+            //boxCollider.enabled = false;
             // change the sprite
             //spriteRenderer.sprite = doorOpenSprite;
         }
