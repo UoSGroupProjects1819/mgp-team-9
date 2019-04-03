@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: 086fb188606a38f4bac3b2ffbd78a2f3
+guid: b4613892e65655945afec0d13c3d7238
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BarrierBlockAnimated_0
-    21300002: BarrierBlockAnimated_1
-    21300004: BarrierBlockAnimated_2
-    21300006: BarrierBlockAnimated_3
-    21300008: BarrierBlockAnimated_4
-    21300010: BarrierBlockAnimated_5
-    21300012: BarrierBlockAnimated_6
+    21300000: CasinoMachineAnimated_0
+    21300002: CasinoMachineAnimated_1
+    21300004: CasinoMachineAnimated_2
+    21300006: CasinoMachineAnimated_3
+    21300008: CasinoMachineAnimated_4
+    21300010: CasinoMachineAnimated_5
+    21300012: CasinoMachineAnimated_6
+    21300014: CasinoMachineAnimated_7
+    21300016: CasinoMachineAnimated_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -38,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -70,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -81,7 +83,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BarrierBlockAnimated_0
+      name: CasinoMachineAnimated_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 30
-        width: 25
-        height: 5
+        y: 34
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,19 +107,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b2cf8572247c4d41a1f68a066d43a4c
+      spriteID: 60edb86aac0e2674aa1b5f780f4609ba
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierBlockAnimated_1
+      name: CasinoMachineAnimated_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 25
-        width: 25
-        height: 5
+        x: 15
+        y: 34
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,19 +127,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32d2aa807b6fdfe4392e8266a5e044be
+      spriteID: dc8190d1c2be6244f93c9cd1c3801664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierBlockAnimated_2
+      name: CasinoMachineAnimated_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 20
-        width: 25
-        height: 5
+        x: 30
+        y: 34
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,19 +147,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb7411947f71b8d448c3824939c16416
+      spriteID: 9c940c9fc88d4184eb6ef77fe09e220a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierBlockAnimated_3
+      name: CasinoMachineAnimated_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 15
-        width: 25
-        height: 5
+        y: 17
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,19 +167,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90bf4a0f72f45be46a3204db18025cc7
+      spriteID: 3e9779afc7c723543891cefebc6242c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierBlockAnimated_4
+      name: CasinoMachineAnimated_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 10
-        width: 25
-        height: 5
+        x: 15
+        y: 17
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,19 +187,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76080c1bbef4fdc43bb175c738e5d28f
+      spriteID: 46574e275bce38246989e43d79f56b91
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierBlockAnimated_5
+      name: CasinoMachineAnimated_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5
-        width: 25
-        height: 5
+        x: 30
+        y: 17
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,19 +207,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe1038ff7dc32464eba36f70e8a8cdfc
+      spriteID: a3ffff8903b4e9049ac35cdcfe736342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BarrierBlockAnimated_6
+      name: CasinoMachineAnimated_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 25
-        height: 5
+        width: 15
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,7 +227,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 673710f0fcb1a674d8da6f0c3097d8e6
+      spriteID: 2bb79da0215909e4d9c793b1c192dd62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasinoMachineAnimated_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b418c235393f2546aa2bbc01b1a28f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasinoMachineAnimated_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c503b61454c054d8f5134f71eb6fb7
       vertices: []
       indices: 
       edges: []
@@ -233,7 +275,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8f70f4a5b59df9843900c126f9b611d6
+    spriteID: f547d0d71e8350548b68b4925fe7fc31
     vertices: []
     indices: 
     edges: []
