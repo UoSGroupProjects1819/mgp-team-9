@@ -9,7 +9,9 @@ public class enemyBasic : MonoBehaviour
     [Header("Collision Detection")]
     public LayerMask enemyLayerMask;
     public LayerMask playerLayerMask;
+    public LayerMask doorLayerMask;
     public Rigidbody2D enemyRigidbody;
+
     [Header("Enemy Movement")]
     public float enemyMoveSpeed;
     [Range(0, 0.1f)]
@@ -48,9 +50,10 @@ public class enemyBasic : MonoBehaviour
 
         RaycastHit2D[] hit = Physics2D.RaycastAll(shootLocation.transform.position, vectorToPlayer, Mathf.Infinity, enemyLayerMask.value);
         RaycastHit2D[] hit2 = Physics2D.RaycastAll(shootLocation.transform.position, vectorToPlayer, Mathf.Infinity, playerLayerMask.value);
+        RaycastHit2D[] hit3 = Physics2D.RaycastAll(shootLocation.transform.position, vectorToPlayer, Mathf.Infinity, doorLayerMask.value);
         Debug.DrawRay(shootLocation.transform.position, vectorToPlayer, Color.yellow, 0.5f);
 
-        if (hit.Length >= 1)
+        if (hit.Length >= 1 || hit2.Length >= 1 || hit3.Length >= 1)
         {
             enemyShoot.canShoot = true;
         }

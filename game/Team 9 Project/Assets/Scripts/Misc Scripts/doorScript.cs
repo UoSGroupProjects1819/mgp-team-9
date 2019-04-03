@@ -49,10 +49,4 @@ public class doorScript : MonoBehaviour
             open = true;
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireCube(this.transform.position, new Vector3(1.5f, 1.5f, 1.5f));
-    }
 }
