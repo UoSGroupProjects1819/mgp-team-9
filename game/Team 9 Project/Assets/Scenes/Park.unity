@@ -1324,6 +1324,11 @@ PrefabInstance:
       propertyPath: enemiesPerWave
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: spawnTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2683115056011151886, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: m_Offset.y
@@ -29291,7 +29296,17 @@ PrefabInstance:
     - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: enemiesPerWave
-      value: 8
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: numberOfWaves
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: spawnTime
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2683115056011151886, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}

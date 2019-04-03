@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 241423679}
   m_Layer: 0
   m_Name: Collision
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2097,6 +2097,21 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 817470220}
+    - target: {fileID: 6764526984146218502, guid: 09ffa1eb34d0238458f20afb59ddf5db,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764526984146218502, guid: 09ffa1eb34d0238458f20afb59ddf5db,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764526984146218502, guid: 09ffa1eb34d0238458f20afb59ddf5db,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ffa1eb34d0238458f20afb59ddf5db, type: 3}
 --- !u!1 &286008858 stripped
@@ -2269,12 +2284,17 @@ PrefabInstance:
     - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: enemiesMustBeDead
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: enemiesPerWave
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: spawnTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8795392605869835738, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
@@ -15990,7 +16010,12 @@ PrefabInstance:
     - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: enemiesMustBeDead
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683115056011151887, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: spawnTime
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e51b3df5eda7b48bb8f4547511b9be, type: 3}
