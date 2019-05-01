@@ -8,7 +8,7 @@ public class playerDamage : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
 
-    public UIControl UIcontrol;
+    private UIControl UIcontrol;
 
     void Start()
     {
