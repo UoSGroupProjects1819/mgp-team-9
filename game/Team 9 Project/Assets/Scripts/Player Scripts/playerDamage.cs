@@ -8,6 +8,8 @@ public class playerDamage : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
 
+    public UIControl UIcontrol;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -19,7 +21,8 @@ public class playerDamage : MonoBehaviour
         {
             Debug.Log("player dead");
             // to be removed VV only so the console doesn't annoy me too much
-            currentHealth = maxHealth;
+            // kill the player, set back to start of level
+            UIcontrol.Death();
         }
     }
 
