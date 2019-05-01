@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc46fe6f0ebd73479034be523b75f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDamageScript: {fileID: 0}
+  playerDamageScript: {fileID: 7612486017202765700}
   playerRigidbody: {fileID: 7612486017202765720}
   moveModifier: 6
 --- !u!50 &7612486017202765720
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  UIcontrol: {fileID: 0}
 --- !u!114 &7612486017202765701
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class playerDamage : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        UIcontrol = GameObject.Find("UIControl").GetComponent<UIControl>();
     }
 
     void Update()
