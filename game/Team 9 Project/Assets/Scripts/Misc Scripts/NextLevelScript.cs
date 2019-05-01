@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelScript : MonoBehaviour
 {
-    public UIControl UIcontrol;
+    private UIControl UIcontrol;
+
+    private void Start()
+    {
+            UIcontrol = GameObject.Find("UIControl").GetComponent<UIControl>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -23,5 +28,10 @@ public class NextLevelScript : MonoBehaviour
     public void LoadNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

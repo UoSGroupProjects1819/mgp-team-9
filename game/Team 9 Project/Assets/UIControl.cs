@@ -27,12 +27,14 @@ public class UIControl : MonoBehaviour
         hideGroups();
         VictoryGroup.alpha = 1;
         VictoryGroup.interactable = true;
+        VictoryGroup.blocksRaycasts = true;
     }
     public void Death()
     {
         hideGroups();
         DeathGroup.alpha = 1;
         DeathGroup.interactable = true;
+        DeathGroup.blocksRaycasts = true;
     }
     public IEnumerator Intro()
     {
@@ -47,11 +49,14 @@ public class UIControl : MonoBehaviour
     {
         IntroGroup.alpha = 0;
         IntroGroup.interactable = false;
+        IntroGroup.blocksRaycasts = false;
 
         DeathGroup.alpha = 0;
         DeathGroup.interactable = false;
+        DeathGroup.blocksRaycasts = false;
 
         VictoryGroup.alpha = 0;
         VictoryGroup.interactable = false;
+        VictoryGroup.blocksRaycasts = false;
     }
 }
