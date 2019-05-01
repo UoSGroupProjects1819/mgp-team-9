@@ -60,6 +60,10 @@ public class enemySpawnControl : MonoBehaviour
                     {
                         canSpawnEnemy = false;
                     }
+                    else
+                    {
+                        canSpawnEnemy = true;
+                    }
                 }
                 if (canSpawnEnemy && waveNumber < numberOfWaves)
                 {
