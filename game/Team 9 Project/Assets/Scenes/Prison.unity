@@ -15612,11 +15612,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room
       objectReference: {fileID: 0}
-    - target: {fileID: 8795392605869835740, guid: 88e51b3df5eda7b48bb8f4547511b9be,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8795392605869835739, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -15701,6 +15696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxEnemyCount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795392605869835740, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8795392605869835738, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
