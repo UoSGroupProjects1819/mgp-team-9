@@ -1,0 +1,2 @@
+Bush looks impassable - sprites should better reflect their properties
+ - path gap
