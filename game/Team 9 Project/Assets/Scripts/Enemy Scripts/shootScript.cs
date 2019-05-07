@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class shootScript : MonoBehaviour
 {
     public float shootDelay;
@@ -33,12 +34,16 @@ public class shootScript : MonoBehaviour
 
     private int bulletPoolLength;
 
+    public AudioClip shootSound;
+    private AudioSource source;
+
     void Start()
     {
         timeSinceLastShot = 0f;
         bulletType = BulletType.regular;
         getBulletPool();
         bulletPoolLength = bullets.Count;
+        source = gameObject.GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -62,6 +67,7 @@ public class shootScript : MonoBehaviour
 
     private void shootBullet()
     {
+        source.PlayOneShot(shootSound);
         // check object pool for available bullets
         for (int i = 0; i < bulletPoolLength; i++)
         {
@@ -81,7 +87,7 @@ public class shootScript : MonoBehaviour
             }
         }
         bulletsShot = 0;
-        timeSinceLastShot = 0f;
+        timeSinceLastShot = 0f - Random.Range(0f, 1f);
     }
 
     private void getBulletPool()

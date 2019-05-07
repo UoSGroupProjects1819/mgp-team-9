@@ -10,20 +10,23 @@ public class playerDamage : MonoBehaviour
 
     private UIControl UIcontrol;
 
+    public AudioClip deathSound;
+    private AudioSource source;
+
     void Start()
     {
         currentHealth = maxHealth;
         UIcontrol = GameObject.Find("UIControl").GetComponent<UIControl>();
+        source = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (currentHealth <= 0)
         {
-            Debug.Log("player dead");
-            // to be removed VV only so the console doesn't annoy me too much
             // kill the player, set back to start of level
             UIcontrol.Death();
+            source.PlayOneShot(deathSound);
         }
     }
 
