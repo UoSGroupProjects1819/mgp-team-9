@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0612873bf9b8146a8584b808e7d8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorOpenSprite: {fileID: 0}
+  doorAnim: {fileID: 6961672264927729148}
 --- !u!61 &6922724656015027021
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -10,18 +10,16 @@ public class doorScript : MonoBehaviour
     private bool open;
     private enemySpawnControl EnemySpawnControl;
     private BoxCollider2D boxCollider;
-    private SpriteRenderer spriteRenderer;
 
     private bool roomEntered = false;
-
-    public Sprite doorOpenSprite;
+    private Animator doorAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         EnemySpawnControl = transform.parent.GetComponentInChildren<enemySpawnControl>();
         boxCollider = GetComponent<BoxCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        doorAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,10 +27,10 @@ public class doorScript : MonoBehaviour
     {
         if (open)
         {
-            this.gameObject.SetActive(false);
-            //boxCollider.enabled = false;
+            //this.gameObject.SetActive(false);
+            boxCollider.enabled = false;
             // change the sprite
-            //spriteRenderer.sprite = doorOpenSprite;
+            doorAnim.SetBool("DoorOpen", true);
         }
         else
         {

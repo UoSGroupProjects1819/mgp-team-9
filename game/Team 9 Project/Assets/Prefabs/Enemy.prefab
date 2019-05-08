@@ -140,7 +140,7 @@ MonoBehaviour:
   canShoot: 1
   shootCount: 1
   shootLocation: {fileID: 1748961917391172309}
-  shootSound: {fileID: 8300000, guid: 098ec7b15ebac274aa66716493f97c8a, type: 3}
+  shootSound: {fileID: 8300000, guid: 21d29e74903b507438063dd5f8833c83, type: 3}
 --- !u!61 &1748961916889698069
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -2879,6 +2879,11 @@ PrefabInstance:
       propertyPath: spawnTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8795392605869835737, guid: 88e51b3df5eda7b48bb8f4547511b9be,
+        type: 3}
+      propertyPath: doorAnim
+      value: 
+      objectReference: {fileID: 89805606}
     - target: {fileID: 8795392605869835738, guid: 88e51b3df5eda7b48bb8f4547511b9be,
         type: 3}
       propertyPath: m_Offset.x
@@ -3311,7 +3316,7 @@ PrefabInstance:
     - target: {fileID: 8084868144333670126, guid: 4f9946bb196a0834d8ebf2b9810e32d8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8084868144333670126, guid: 4f9946bb196a0834d8ebf2b9810e32d8,
         type: 3}
@@ -3541,12 +3546,12 @@ PrefabInstance:
     - target: {fileID: 7612486017202765723, guid: d1bcfa7291f07fe4caa1da7d7b4daa08,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.98
+      value: -15.5
       objectReference: {fileID: 0}
     - target: {fileID: 7612486017202765723, guid: d1bcfa7291f07fe4caa1da7d7b4daa08,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.72
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 7612486017202765723, guid: d1bcfa7291f07fe4caa1da7d7b4daa08,
         type: 3}
@@ -4247,7 +4252,7 @@ PrefabInstance:
     - target: {fileID: 8084868144333670126, guid: 4f9946bb196a0834d8ebf2b9810e32d8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8084868144333670126, guid: 4f9946bb196a0834d8ebf2b9810e32d8,
         type: 3}
@@ -16465,6 +16470,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -4.299988
       objectReference: {fileID: 0}
+    - target: {fileID: 3326738469870111638, guid: 9d1e8c84b6ebf8240a8bd6b190798521,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2107168963}
+    - target: {fileID: 3326738469870111638, guid: 9d1e8c84b6ebf8240a8bd6b190798521,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326738470374785272, guid: 9d1e8c84b6ebf8240a8bd6b190798521,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2107168963}
+    - target: {fileID: 3326738470374785272, guid: 9d1e8c84b6ebf8240a8bd6b190798521,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d1e8c84b6ebf8240a8bd6b190798521, type: 3}
 --- !u!225 &1823207539 stripped
@@ -16884,7 +16909,7 @@ PrefabInstance:
     - target: {fileID: 8084868144333670126, guid: 4f9946bb196a0834d8ebf2b9810e32d8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8084868144333670126, guid: 4f9946bb196a0834d8ebf2b9810e32d8,
         type: 3}
@@ -17647,6 +17672,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc97deeb0cffeb247851204e9b8c83dd, type: 3}
+--- !u!114 &2107168963 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2802597528192173869, guid: dc97deeb0cffeb247851204e9b8c83dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 2107168962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9114080cda66741bec37e891d8fb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2139514895 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8084868144333670121, guid: 4f9946bb196a0834d8ebf2b9810e32d8,
